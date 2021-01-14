@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>관리자 페이지</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="./index.html">관리자 페이지</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbar"
+      aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="./index.html">대시보드</a>
+        <a class="nav-item nav-link" href="./event.html">이벤트</a>
+        <a class="nav-item nav-link active" href="./blog.html">블로그</a>
+        <a class="nav-item nav-link" href="./user.html">회원</a>
+      </div>
+      <div class="navbar-nav mr-2">
+        <a class="nav-item nav-link" href="./userLogin.html">로그인</a>
+        <a class="nav-item nav-link" href="./userLogout.html">로그아웃</a>
+        <a class="nav-item nav-link" href="./userEdit.html">관리자 정보 수정</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="header">
+    <div class="container p-3 bg-dark text-white">
+      <div class="row">
+        <div class="col-9 info">
+          <h4><img class="mr-3" src="./img/edit-small.svg">블로그
+            <small>페이지를 관리하세요.</small>
+          </h4>
+        </div>
+        <div class="dropdown btn-group float-right">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            관리 목록 ▼
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="./index.html">대시보드</a>
+            <a class="dropdown-item" href="./event.html">이벤트 관리</a>
+            <a class="dropdown-item active" href="./blog.html">블로그 관리</a>
+            <a class="dropdown-item" href="./user.html">회원 관리</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <ol class="breadcrumb">
+      <li class="active">
+        블로그 내 포스트를 관리하세요.
+      </li>
+    </ol>
+  </div>
+
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="list-group">
+            <a href="./index.html" class="list-group-item">대시보드</a>
+            <a href="./event.html" class="list-group-item">이벤트 관리 <span class="badge badge-secondary">12</span>
+            </a>
+            <a href="./blog.html" class="list-group-item active">블로그 관리</a>
+            <a href="./user.html" class="list-group-item">회원 관리 <span class="badge badge-secondary">6</span></a>
+          </div>
+          <div class="p-2 my-2">
+            <h5 class=mt-2>CPU 점유율</h5>
+            <div class="progress" style="height: 20px; background-color: #f2f2f2;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar"
+                style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+            <h5 class=mt-2>메모리 점유율</h5>
+            <div class="progress" style="height: 20px; background-color: #f2f2f2;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-primary" role="progressbar"
+                style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+            <h5 class=mt-2>디스크 점유율</h5>
+            <div class="progress" style="height: 20px; background-color: #f2f2f2;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-danger" role="progressbar"
+                style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+            <h5 class=mt-2>트래픽 점유율</h5>
+            <div class="progress" style="height: 20px; background-color: #f2f2f2;">
+              <div class="progress-bar progress-bar-animated progress-bar-striped bg-warning" role="progressbar"
+                style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+          <div class="p-2 my-2">
+            <div class="card text-center pt-2 bg-light">
+              <h5 class="pt-2 pb-2">외부 사이트</h5>
+              <ul class="list-group">
+                <li class="list-group-item">네이버</li>
+                <li class="list-group-item">구글</li>
+                <li class="list-group-item">유튜브</li>
+                <li class="list-group-item">페이스북</li>
+              </ul>
+              <div class="card-footer text-muted">
+                12분 전에 마지막으로 접근
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--사이드바 끝 부분-->
+        <div class="col-9 main">
+          <!-- 본문(main) 영역이라 할 수 있음 -->
+          <div class="list-group">
+            <a href="#" class="list-group-item active">최신 포스팅</a>
+            <div class="list-group-item">
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                  <div class="d-flex 2-100 justify-content-between">
+                    <h5 class="mb-1">안양에서 제일 맛있는 야체곱창집은?</h5>
+                    <small style="width: 120px; text-align: rigith;">1일 전</small>
+                  </div>
+                  <p class="mb-1">야채 곱창들 좋아하시지요? 야채곱창의 원조는 서울 왕십리에서...</p>
+                  <small>좋아요 5개</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex 2-100 justify-content-between">
+                    <h5 class="mb-1">안양 최고의 소곱창집을 찾았다!</h5>
+                    <small style="width: 120px; text-align: rigith;">2일 전</small>
+                  </div>
+                  <p class="mb-1">소곱창집 너무 많습니다. 게다가 비싸니까 쉽게 테스트를 할 수도...</p>
+                  <small>좋아요 15개</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex 2-100 justify-content-between">
+                    <h5 class="mb-1">짬뽕 먹을거면 군포로 가라!</h5>
+                    <small style="width: 120px; text-align: rigith;">3일 전</small>
+                  </div>
+                  <p class="mb-1">안양의 많은 중국집을 가봤지만 다 실패를 했지요. 하지만 군포에서...</p>
+                  <small>좋아요 115개</small>
+                </a>
+              </div>
+              <button class="btn btn-success mt-2" data-toggle="modal" data-target="#modal">글 작성</button>
+            </div>
+          </div>
+          <div class="list-group mt-3">
+            <a href="#" class="list-group-item active">인기 포스팅</a>
+            <div class="list-group-item">
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="modal" tabindex="-01" aria-labelledby="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">이벤트 추가</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>제목</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>내용</label>
+              <textarea class="form-control" style="height: 180px;"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">작성하기</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="bg-dark  mt-4 p-5 text-center" style="color:#fff">
+    Copyright &copy; 2020 김서연 All Rights Reserved.
+  </footer>
+
+  <script src="./js/jquery-3.5.1.slim.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/mdb.min.js"></script>
+  <script>
+    //bar
+    var ctxB = document.getElementById("barChart").getContext('2d');
+    var myBarChart = new Chart(ctxB, {
+      type: 'bar',
+      data: {
+        labels: ["짬뽕 맛집...", "최고의 곱창...", "지금까지의 맛은...", "대림대가 어디냐면..."],
+        datasets: [{
+          label: '조회수',
+          data: [223, 139, 87, 75],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

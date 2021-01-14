@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/jejugothic.css');
+
+.nav-bar-brand, h1, h2, h3, h4, h5, h6{
+  font-family: 'Jeju Gothic';
+}
+h5{
+  font-size:  18px;
+}
+body{
+  font-family: 'Nanum Gothic';
+}
+#header{
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+#header small{
+  color: #ccc;
+}
+.info{
+  margin-top: 3px;
+}
+.dropdown-toggle::after{
+  content:none;
+}
+
+@media (max-width: 990px){
+  .mobile{
+    display: none;
+  }
+}
+.modal{
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 auto;
+  height: 600px;
+}
